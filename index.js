@@ -45,7 +45,7 @@ function lagrangeInterpolation(points) {
 
 
 // Read and parse the JSON file
-fs.readFile('data.json', 'utf8', (err, data) => {
+fs.readFile('data2.json', 'utf8', (err, data) => {
     if (err) {
         console.error('Error reading the file:', err);
         return;
