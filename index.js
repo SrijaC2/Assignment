@@ -1,4 +1,4 @@
-
+// Interact with the file system
 import fs from 'fs';
 
 // Function to decode values from different bases
@@ -56,7 +56,7 @@ fs.readFile('data.json', 'utf8', (err, data) => {
 
     // Extract points from the JSON
     const points = extractPoints(jsonData);
-    console.log(points)
+    // console.log(points)
 
     // Only take k points (minimum required to solve the polynomial)
     const k = jsonData.keys.k;
@@ -66,5 +66,5 @@ fs.readFile('data.json', 'utf8', (err, data) => {
     const constantTerm = lagrangeInterpolation(selectedPoints);
 
     // Output the result
-    console.log("Constant term (c) of the polynomial:", constantTerm);
+    console.log("Constant term (c) of the polynomial using Lagrange interpolation:", constantTerm);
 });
